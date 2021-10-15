@@ -1,0 +1,131 @@
+:root {
+  font-size: 14px;
+}
+body {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+  background-image: url(bg1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5.5rem;
+  background-color: rgba(5, 5, 59, 0.842);
+  color: rgb(219, 212, 212);
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .title {
+  padding: 0.7rem;
+  margin: 0.7rem;
+  font-size: 1.3rem;
+}
+nav button {
+  padding: 0.8rem;
+  margin: 0.5rem 1.5rem;
+}
+.users {
+  margin-top: 5.5rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+}
+.users > div {
+  margin: 0.5rem;
+  padding: 1rem;
+  background-color: rgba(24, 15, 95, 0.842);
+  color: rgb(189, 192, 196);
+  border-radius: 1rem;
+  text-align: center;
+  transition: box-shadow 0.4s ease;
+  animation: users-ani 2s ease;
+}
+.users > div .info {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.avatar {
+  width: 8.142857143rem;
+  height: 8.142857143rem;
+  border-radius: 30%;
+  overflow: hidden;
+  margin: auto;
+}
+.users > div:hover {
+  box-shadow: 0 0 25px white;
+}
+.avatar img {
+  width: 8.142857143rem;
+  height: 8.142857143rem;
+  margin: 0;
+}
+@keyframes users-ani {
+  0% {
+    transform: rotateY(45deg);
+    opacity: 0.1;
+  }
+  100% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+button {
+  border: solid 3px grey;
+  background-color: rgb(219, 219, 219);
+  border-radius: 1rem;
+  transition: background-color 0.2s ease;
+}
+button:hover {
+  background-color: rgb(134, 223, 223);
+}
+button:active {
+  background-color: rgb(209, 74, 169);
+}
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: auto;
+  box-sizing: border-box;
+  border: 32px solid #000;
+  border-color: #000 transparent #000 transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+.loading {
+  padding: 3rem;
+  display: flex;
+}
